@@ -1,0 +1,31 @@
+/* Genelde tüm sayfaya biraz yumuşak görünüm */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e6f0ff; /* Açık mavi genel zemin */
+  color: #000;
+}
+
+/* Üst başlık kısmı */
+header {
+  background-color: #003366; /* Koyu mavi */
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Alt içerikler */
+section {
+  background-color: #d6eaff; /* BİR TIK KOYU MAVİ */
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  color: #333;
+}
