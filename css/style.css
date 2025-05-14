@@ -29,3 +29,8 @@ footer {
   margin-top: 30px;
   color: #333;
 }
+.slider-img {
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
