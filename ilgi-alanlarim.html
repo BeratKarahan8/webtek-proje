@@ -23,53 +23,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Özgeçmiş</title>
+  <title>İlgi Alanlarım – Filmler</title>
   <link rel="stylesheet" href="css/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
   <div class="container mt-5">
+
     <header>
-      <h1>Berat Karahan</h1>
-      <p>Bilgisayar Mühendisliği Öğrencisi</p>
+      <h1>İlgi Alanlarım: Filmler</h1>
+      <p>Film isimlerini yazarak bilgilerine ulaşabilirsiniz.</p>
     </header>
 
-    <hr>
-
     <section>
-      <h2>Eğitim Bilgileri</h2>
-      <ul>
-        <li><strong>Lisans:</strong> Sakarya Üniversitesi, Bilgisayar Mühendisliği (2024 - ...)</li>
-        <li><strong>Lise:</strong> Sami Evkuran Anadolu Lisesi (2019 - 2023)</li>
-      </ul>
+      <input type="text" id="filmAdi" class="form-control" placeholder="Bir film adı yazın örn: 47 Ronin">
+      <button onclick="filmAra()" class="btn btn-primary mt-2">Ara</button>
+
+      <div id="filmBilgi" class="mt-4"></div>
     </section>
 
-    <section>
-      <h2>Yetenekler</h2>
-      <ul>
-        <li>HTML, CSS, JavaScript</li>
-        <li>C#, Java</li>
-        <li>Git ve GitHub kullanımı</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Yabancı Diller</h2>
-      <p>İngilizce (B1), Almanca (A1)</p>
-    </section>
-
-    <section>
-      <h2>İletişim</h2>
-      <address>
-        E-posta: karahanberat1111@gmail.com<br>
-        Telefon: +90 555 145 1608<br>
-        Şehir: Sakarya
-      </address>
-    </section>
-
-    <footer class="mt-4">
-      <p>&copy; 2025 Berat Karahan</p>
-    </footer>
   </div>
+
+  <script>
+    async function filmAra() {
+      const apiKey = "a32be825"; // ← Buraya kendi anahtarını yaz
+      const film = document.getElementById("filmAdi").value;
+      const url = `https://www.omdbapi.com/?t=${film}&apikey=${apiKey}`;
+
+      const res = await fetch(url);
+      const data = await res.json();
+
+      if (data.Response === "True") {
+        document.getElementById("filmBilgi").innerHTML = `
+          <h3>${data.Title} (${data.Year})</h3>
+          <img src="${data.Poster}" class="img-fluid mb-3" style="max-height:300px;">
+          <p><strong>Tür:</strong> ${data.Genre}</p>
+          <p><strong>Yönetmen:</strong> ${data.Director}</p>
+          <p><strong>Konu:</strong> ${data.Plot}</p>
+        `;
+      } else {
+        document.getElementById("filmBilgi").innerHTML = `<p>Film bulunamadı.</p>`;
+      }
+    }
+  </script>
 </body>
 </html>
