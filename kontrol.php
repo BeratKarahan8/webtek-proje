@@ -1,5 +1,5 @@
 <?php
-$dogru_kullanici = "berat.karahan1@org.sakarya.edu.tr";
+$dogru_kullanici = "B241210103@gmail.com";
 $dogru_sifre = "B241210103";
 
 $gelen_kullanici = $_POST['email'] ?? '';
@@ -16,8 +16,8 @@ if ($gelen_kullanici === $dogru_kullanici && $gelen_sifre === $dogru_sifre) {
   <title>Hoşgeldiniz</title>
   <script>
   setTimeout(function() {
-    window.location.href = 'http://localhost/webtekprojem/index.html';
-  }, 4000); // 4 saniye sonra yönlendir
+  window.location.href = 'hakkimda.html';
+    }, 4000); // 4 saniye sonra yönlendir
 </script>
   
   <style>

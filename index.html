@@ -1,103 +1,55 @@
 <!DOCTYPE html>
 <html lang="tr">
-  
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hakkımda</title>
+  <title>Giriş Yap</title>
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-
 <body>
-
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">Berat Karahan</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Hakkımda</a></li>
-        <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
-        <li class="nav-item"><a class="nav-link" href="sehir.html">Şehrim</a></li>
-        <li class="nav-item"><a class="nav-link" href="miras.html">Mirasımız</a></li>
-        <li class="nav-item"><a class="nav-link" href="ilgi-alanlarim.html">İlgi Alanlarım</a></li>
-        <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
   <div class="container mt-5">
-
     <header>
-      <h1>Merhaba, ben Berat</h1>
-      <p>Bilgisayar mühendisliği öğrencisiyim. Bu sitede kendimden ve memleketimden bahsedeceğim.</p>
+      <h1>Giriş Yap</h1>
     </header>
 
-    <section>
-      <h2>Hobilerim</h2>
-      <div class="row mb-4">
-        <div class="col-md-6">
-          <ul>
-            <li>Bisiklete binmek</li>
-            <li>Bilgisayar oyunu oynamak</li>
-            <li>Yazılım geliştirmek</li>
-          </ul>
-        </div>
-        <div class="col-md-6">
-          <div class="row">
-            <div class="col-4">
-              <img src="img/hobi1.jpg" class="hobi-img mb-2" alt="Bisiklet">
-            </div>
-            <div class="col-4">
-              <img src="img/hobi2.jpg" class="hobi-img mb-2" alt="Oyun">
-            </div>
-            <div class="col-4">
-              <img src="img/hobi3.jpg" class="hobi-img mb-2" alt="Kodlama">
-            </div>
-          </div>
-        </div>
+    <form action="kontrol.php" method="POST" onsubmit="return validateForm()">
+      <div class="mb-3">
+        <label for="email" class="form-label">Kullanıcı Adı (Mail):</label>
+        <input type="text" id="email" name="email" class="form-control">
       </div>
-    </section>
-
-    <section>
-      <h2>Sevdiğim Etkinlikler</h2>
-      <div class="row mb-4">
-        <div class="col-md-6">
-          <p>Tiyatro izlemek, kamp yapmak ve şehir gezileri yapmayı çok severim.</p>
-        </div>
-        <div class="col-md-6">
-          <div class="row">
-            <div class="col-4">
-              <img src="img/etkinlik1.jpg" class="etkinlik-img mb-2" alt="Tiyatro">
-            </div>
-            <div class="col-4">
-              <img src="img/etkinlik2.jpg" class="etkinlik-img mb-2" alt="Kamp">
-            </div>
-            <div class="col-4">
-              <img src="img/etkinlik3.jpg" class="etkinlik-img mb-2" alt="Gezi">
-            </div>
-          </div>
-        </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Şifre:</label>
+        <input type="password" id="password" name="password" class="form-control text-uppercase">
       </div>
-    </section>
+      <button type="submit" class="btn btn-primary">Giriş Yap</button>
+    </form>
 
-    <section>
-      <h2>Favori Spor Dalım</h2>
-      <div class="row mb-4">
-        <div class="col-md-6">
-          <p>Futbol. Favori takımım: <strong>Fenerbahçe</strong></p>
-        </div>
-        <div class="col-md-6">
-          <img src="img/spor1.jpg" class="img-fluid rounded" alt="Fenerbahçe">
-        </div>
-      </div>
-    </section>
-
+    <p class="mt-3 text-danger" id="error-msg"></p>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function validateForm() {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const errorMsg = document.getElementById("error-msg");
+
+      // Boş mu kontrolü
+      if (!email || !password) {
+        errorMsg.textContent = "Tüm alanlar doldurulmalıdır.";
+        return false;
+      }
+
+      // E-posta formatı kontrolü
+      const emailRegex = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+      if (!emailRegex.test(email)) {
+        errorMsg.textContent = "Geçerli bir e-posta girin.";
+        return false;
+      }
+
+      return true;
+    }
+  </script>
 </body>
 </html>
