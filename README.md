@@ -29,9 +29,13 @@ Projenin amacı HTML, CSS, JavaScript, PHP ve Vue.js gibi teknolojileri kullanar
 
 ## Kurulum ve Çalıştırma
 
-1. Projeyi GitHub’dan indirin veya klonlayın:
-2. Bir yerel sunucu (WAMP, XAMPP) ile açın.
-3. http://localhost/webtek-proje/index.html adresinden kullanmaya başlayın.
+Projeyi çalıştırmak için:
+
+1. Tarayıcınızdan aşağıdaki adrese gidin:
+ https://beratkarahan.rf.gd
+
+2. Site doğrudan giriş (login) sayfasıyla açılır. Doğru bilgilerle giriş yaptıktan sonra yönlendirme otomatik olarak yapılır.
+
 
 ## Geliştirici
 
