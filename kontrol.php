@@ -1,26 +1,32 @@
 <?php
+// Doğru kullanıcı adı ve şifre tanımlanıyor
 $dogru_kullanici = "B241210103@gmail.com";
 $dogru_sifre = "B241210103";
 
+// Formdan gelen bilgiler alınıyor (boşsa varsayılan boş değer)
 $gelen_kullanici = $_POST['email'] ?? '';
 $gelen_sifre = $_POST['password'] ?? '';
 
-// Kullanıcı adı doğruysa e-posta adresini parçala:
+// E-posta adresinden kullanıcı adı (ön kısım) çıkarılıyor
 $parcalar = explode("@", $gelen_kullanici);
-$kullanici_adi = $parcalar[0]; // berat.karahan1
+$kullanici_adi = $parcalar[0]; 
 
+// Kullanıcı adı ve şifre doğruysa
 if ($gelen_kullanici === $dogru_kullanici && $gelen_sifre === $dogru_sifre) {
    echo "
 <html>
 <head>
   <title>Hoşgeldiniz</title>
+
+  <!-- 4 saniye sonra anasayfaya yönlendirme -->
   <script>
   setTimeout(function() {
-  window.location.href = 'hakkimda.html';
-    }, 4000); // 4 saniye sonra yönlendir
-</script>
-  
+    window.location.href = 'hakkimda.html';
+  }, 4000);
+  </script>
+
   <style>
+    /* Sayfa stil ayarları */
     body {
       display: flex;
       justify-content: center;
@@ -47,6 +53,7 @@ if ($gelen_kullanici === $dogru_kullanici && $gelen_sifre === $dogru_sifre) {
   </style>
 </head>
 <body>
+  <!-- Başarılı giriş mesajı -->
   <div class='kutucuk'>
     Hoşgeldiniz, $kullanici_adi
     <small>4 saniye içinde anasayfaya yönlendiriliyorsunuz...</small>
@@ -56,6 +63,7 @@ if ($gelen_kullanici === $dogru_kullanici && $gelen_sifre === $dogru_sifre) {
 ";
 
 } else {
+    // Giriş başarısızsa uyarı göster ve login sayfasına dön
     echo "<script>
       alert('Kullanıcı adı veya şifre hatalı!');
       window.location.href = 'login.html';

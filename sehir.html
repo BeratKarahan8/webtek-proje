@@ -5,92 +5,102 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Şehrim</title>
+
+  <!-- Stil dosyaları -->
   <link rel="stylesheet" href="css/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
 
+  <!-- Navigasyon menüsü -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="hakkimda.html">Berat Karahan</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="hakkimda.html">Hakkımda</a></li>
-        <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
-        <li class="nav-item"><a class="nav-link" href="sehir.html">Şehrim</a></li>
-        <li class="nav-item"><a class="nav-link" href="miras.html">Mirasımız</a></li>
-        <li class="nav-item"><a class="nav-link" href="ilgi-alanlarim.html">İlgi Alanlarım</a></li>
-        <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
-      </ul>
+    <div class="container-fluid">
+      <a class="navbar-brand" href="hakkimda.html">Berat Karahan</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="hakkimda.html">Hakkımda</a></li>
+          <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+          <li class="nav-item"><a class="nav-link" href="sehir.html">Şehrim</a></li>
+          <li class="nav-item"><a class="nav-link" href="takimimiz.html">Takımımız</a></li>
+          <li class="nav-item"><a class="nav-link" href="ilgi-alanlarim.html">İlgi Alanlarım</a></li>
+          <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
+  <!-- Sayfa içeriği -->
   <div class="container mt-5">
 
+    <!-- Başlık -->
     <header>
       <h1>Memleketim: Bursa</h1>
       <p>Yeşilin ve tarihin şehri</p>
     </header>
 
-    <!-- Slider Başlangıcı -->
+    <!-- Görsel slider -->
     <div id="sehirSlider" class="carousel slide mb-4" data-bs-ride="carousel" style="max-width: 600px; margin: 0 auto;">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <a href="#uludag">
-        <img src="img/uludag.jpg" class="d-block w-100 slider-img" alt="Uludağ">
-      </a>
+      <div class="carousel-inner">
+        <!-- Her resme tıklandığında sayfa içi bağlantıya gider -->
+        <div class="carousel-item active">
+          <a href="#uludag">
+            <img src="img/uludag.jpg" class="d-block w-100 slider-img" alt="Uludağ">
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="#cumalikizik">
+            <img src="img/cumalikizik.jpg" class="d-block w-100 slider-img" alt="Cumalıkızık">
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="#koza">
+            <img src="img/kozahan.jpg" class="d-block w-100 slider-img" alt="Koza Han">
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="#tophane">
+            <img src="img/tophane.jpg" class="d-block w-100 slider-img" alt="Tophane">
+          </a>
+        </div>
+      </div>
+      <!-- Slider kontrol düğmeleri -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#sehirSlider" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#sehirSlider" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
     </div>
-    <div class="carousel-item">
-      <a href="#cumalikizik">
-        <img src="img/cumalikizik.jpg" class="d-block w-100 slider-img" alt="Cumalıkızık">
-      </a>
-    </div>
-    <div class="carousel-item">
-      <a href="#koza">
-        <img src="img/kozahan.jpg" class="d-block w-100 slider-img" alt="Koza Han">
-      </a>
-    </div>
-    <div class="carousel-item">
-      <a href="#tophane">
-        <img src="img/tophane.jpg" class="d-block w-100 slider-img" alt="Tophane">
-      </a>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#sehirSlider" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#sehirSlider" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
-</div>
-    <!-- Slider Bitişi -->
 
-    <!-- Bilgiler -->
+    <!-- Genel bilgi -->
     <section>
       <h2>Nüfus ve Genel Bilgi</h2>
       <p>Bursa, Türkiye'nin en kalabalık 4. ilidir. 2024 verilerine göre nüfusu yaklaşık 3,2 milyondur.</p>
     </section>
 
+    <!-- Uludağ tanıtımı -->
     <section id="uludag">
       <h2>Uludağ</h2>
       <p>Türkiye'nin en büyük kış ve doğa turizmi merkezi olan Uludağ, kayak ve doğa yürüyüşü için idealdir.</p>
     </section>
 
+    <!-- Cumalıkızık tanıtımı -->
     <section id="cumalikizik">
       <h2>Cumalıkızık</h2>
       <p>Osmanlı döneminden kalan tarihi köy, UNESCO Dünya Mirası listesindedir.</p>
     </section>
 
+    <!-- Koza Han tanıtımı -->
     <section id="koza">
       <h2>Koza Han</h2>
       <p>İpekçiliğiyle meşhur olan bu tarihi han, Bursa'nın ticaret merkezlerinden biridir.</p>
     </section>
 
+    <!-- Tophane tanıtımı -->
     <section id="tophane">
       <h2>Tophane</h2>
       <p>Bursa'nın manzarasına hakim, Osman Gazi ve Orhan Gazi türbelerinin bulunduğu tarihi bölgedir.</p>
@@ -98,6 +108,7 @@
 
   </div>
 
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -1,13 +1,13 @@
-/* Genelde tüm sayfaya biraz yumuşak görünüm */
+/* Sayfa genel ayarları */
 body {
   font-family: Arial, sans-serif;
-  background-color: #e6f0ff; /* Açık mavi genel zemin */
+  background-color: #e6f0ff;
   color: #000;
 }
 
-/* Üst başlık kısmı */
+/* Üst başlık */
 header {
-  background-color: #003366; /* Koyu mavi */
+  background-color: #003366;
   color: white;
   padding: 20px;
   border-radius: 10px;
@@ -15,27 +15,30 @@ header {
   margin-bottom: 20px;
 }
 
-/* Alt içerikler */
+/* İçerik bölümleri */
 section {
-  background-color: #d6eaff; /* BİR TIK KOYU MAVİ */
+  background-color: #d6eaff;
   padding: 15px;
   margin-bottom: 15px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
+/* Sayfa altı */
 footer {
   text-align: center;
   margin-top: 30px;
   color: #333;
 }
 
+/* Slider resimleri */
 .slider-img {
   max-height: 300px;
   object-fit: cover;
   border-radius: 10px;
 }
 
+/* Stadyum resmi */
 .stadyum-img {
   max-width: 400px;
   display: block;
@@ -43,10 +46,10 @@ footer {
   border-radius: 10px;
 }
 
+/* Hobi ve etkinlik görselleri */
 .hobi-img, .etkinlik-img {
   width: 100%;
   height: 150px;
-  max-height: 150px;
   object-fit: cover;
   border-radius: 8px;
   display: block;

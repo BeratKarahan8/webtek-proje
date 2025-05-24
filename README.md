@@ -1,16 +1,16 @@
 ## WebTekProjem
 
 Bu proje, Sakarya Üniversitesi Bilgisayar Mühendisliği bölümü Web Teknolojileri dersi kapsamında geliştirilmiştir.
-Projenin amacı HTML, CSS, JavaScript, PHP ve Vue.js gibi teknolojileri kullanarak bir kişisel tanıtım sitesi oluşturmaktır.
+Projenin amacı HTML, CSS, JavaScript ve PHP gibi teknolojileri kullanarak bir kişisel tanıtım sitesi oluşturmaktır.
 
 ## Sayfa Listesi
 
 | Sayfa               | Açıklama |
 |---------------------|----------|
-| hakkimda.html          | Hakkımda sayfası – hobiler, etkinlikler, favori spor |
+| hakkimda.html       | Hakkımda sayfası – hobiler, etkinlikler, favori spor |
 | cv.html             | Özgeçmiş – eğitim, yetenek, iletişim |
 | sehir.html          | Şehrim – galeri ve açıklama |
-| miras.html          | Mirasımız – Bursaspor tanıtımı |
+| takimimiz.html      | Takımımız – Bursaspor tanıtımı |
 | ilgi-alanlarim.html | API ile film bilgisi getirme (OMDb API) |
 | iletisim.html       | İletişim formu – JS ve Vue.js ile kontrol |
 | iletisim-sonuc.html | Form gönderildikten sonra sonuç ekranı |
@@ -24,7 +24,6 @@ Projenin amacı HTML, CSS, JavaScript, PHP ve Vue.js gibi teknolojileri kullanar
 - HTML5
 - CSS3 (Bootstrap 5)
 - JavaScript
-- Vue.js
 - PHP
 
 ## Kurulum ve Çalıştırma
